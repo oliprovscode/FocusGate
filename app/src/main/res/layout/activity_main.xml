@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/space_6">
+
+            <!-- Header -->
+            <TextView
+                android:id="@+id/tvAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FocusGate"
+                android:textColor="@color/text_primary"
+                android:textSize="@dimen/text_2xl"
+                android:textStyle="bold"
+                android:letterSpacing="-0.02"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginBottom="@dimen/space_2" />
+
+            <TextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Instagram is locked."
+                android:textColor="@color/text_muted"
+                android:textSize="@dimen/text_base"
+                android:layout_marginBottom="@dimen/space_8" />
+
+            <!-- Streak card -->
+            <LinearLayout
+                android:id="@+id/cardStreak"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/space_6"
+                android:layout_marginBottom="@dimen/space_4">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_flame"
+                    android:layout_marginEnd="@dimen/space_4" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvStreakCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/text_primary"
+                        android:textSize="@dimen/text_xl"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/streak_label"
+                        android:textColor="@color/text_muted"
+                        android:textSize="@dimen/text_sm" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvTodayStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Not done"
+                    android:textColor="@color/text_faint"
+                    android:textSize="@dimen/text_sm" />
+            </LinearLayout>
+
+            <!-- Unlock button -->
+            <Button
+                android:id="@+id/btnUnlock"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_button_primary"
+                android:text="Choose a task to unlock"
+                android:textColor="@color/bg"
+                android:textSize="@dimen/text_base"
+                android:textStyle="bold"
+                android:layout_marginBottom="@dimen/space_4" />
+
+            <!-- Today done state (hidden by default) -->
+            <LinearLayout
+                android:id="@+id/layoutTodayDone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/space_6"
+                android:layout_marginBottom="@dimen/space_4"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:src="@drawable/ic_check_circle"
+                    android:layout_marginEnd="@dimen/space_4" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Instagram unlocked for today."
+                    android:textColor="@color/success"
+                    android:textSize="@dimen/text_base" />
+            </LinearLayout>
+
+            <!-- Section: History -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/history_label"
+                android:textColor="@color/text_muted"
+                android:textSize="@dimen/text_sm"
+                android:letterSpacing="0.08"
+                android:textAllCaps="true"
+                android:layout_marginTop="@dimen/space_8"
+                android:layout_marginBottom="@dimen/space_3" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false" />
+
+            <!-- Accessibility warning -->
+            <LinearLayout
+                android:id="@+id/layoutAccessibilityWarning"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="@dimen/space_6"
+                android:layout_marginTop="@dimen/space_6"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Accessibility permission needed"
+                    android:textColor="@color/warning"
+                    android:textSize="@dimen/text_base"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="@dimen/space_2" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FocusGate needs accessibility access to block Instagram. Tap to enable."
+                    android:textColor="@color/text_muted"
+                    android:textSize="@dimen/text_sm"
+                    android:layout_marginBottom="@dimen/space_4" />
+
+                <Button
+                    android:id="@+id/btnEnableAccessibility"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:background="@drawable/bg_button_ghost"
+                    android:text="Enable in Settings"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_sm"
+                    android:paddingStart="@dimen/space_6"
+                    android:paddingEnd="@dimen/space_6" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

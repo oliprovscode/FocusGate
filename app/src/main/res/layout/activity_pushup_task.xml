@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <!-- Camera preview -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/cameraPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Overlay -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:background="#80000000"
+        android:padding="@dimen/space_6">
+
+        <TextView
+            android:id="@+id/tvRepsCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 / 10"
+            android:textColor="@color/text_primary"
+            android:textSize="@dimen/text_hero"
+            android:textStyle="bold"
+            android:letterSpacing="-0.03"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/space_3" />
+
+        <TextView
+            android:id="@+id/tvPushupStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Get into position"
+            android:textColor="@color/text_muted"
+            android:textSize="@dimen/text_base"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/space_8" />
+
+        <Button
+            android:id="@+id/btnCancelPushup"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_button_ghost"
+            android:text="Cancel"
+            android:textColor="@color/text_muted"
+            android:textSize="@dimen/text_sm" />
+    </LinearLayout>
+
+</FrameLayout>

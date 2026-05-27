@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/space_8">
+
+    <ImageView
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:src="@drawable/ic_lock"
+        android:layout_marginBottom="@dimen/space_8" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blocked_title"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_2xl"
+        android:textStyle="bold"
+        android:letterSpacing="-0.02"
+        android:layout_marginBottom="@dimen/space_3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/blocked_subtitle"
+        android:textColor="@color/text_muted"
+        android:textSize="@dimen/text_base"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/space_12" />
+
+    <Button
+        android:id="@+id/btnChooseTask"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_button_primary"
+        android:text="@string/choose_task"
+        android:textColor="@color/bg"
+        android:textSize="@dimen/text_base"
+        android:textStyle="bold"
+        android:layout_marginBottom="@dimen/space_3" />
+
+    <Button
+        android:id="@+id/btnDismiss"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_button_ghost"
+        android:text="Not now"
+        android:textColor="@color/text_muted"
+        android:textSize="@dimen/text_sm" />
+
+</LinearLayout>

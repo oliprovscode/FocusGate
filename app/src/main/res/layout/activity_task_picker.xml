@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:padding="@dimen/space_6">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose a task"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_xl"
+        android:textStyle="bold"
+        android:letterSpacing="-0.01"
+        android:layout_marginTop="@dimen/space_8"
+        android:layout_marginBottom="@dimen/space_2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Complete one to unlock Instagram for today."
+        android:textColor="@color/text_muted"
+        android:textSize="@dimen/text_sm"
+        android:layout_marginBottom="@dimen/space_8" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvTasks"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>

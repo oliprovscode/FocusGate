@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/space_8">
+
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/ic_book"
+        android:layout_marginBottom="@dimen/space_8" />
+
+    <TextView
+        android:id="@+id/tvReadingTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5:00"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_hero"
+        android:textStyle="bold"
+        android:letterSpacing="-0.03"
+        android:fontFamily="monospace"
+        android:layout_marginBottom="@dimen/space_3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Put the phone face down and read."
+        android:textColor="@color/text_muted"
+        android:textSize="@dimen/text_base"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/space_2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Timer pauses if you pick it up."
+        android:textColor="@color/text_faint"
+        android:textSize="@dimen/text_sm"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/space_12" />
+
+    <Button
+        android:id="@+id/btnCancelReading"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_button_ghost"
+        android:text="Cancel"
+        android:textColor="@color/text_muted"
+        android:textSize="@dimen/text_sm" />
+
+</LinearLayout>

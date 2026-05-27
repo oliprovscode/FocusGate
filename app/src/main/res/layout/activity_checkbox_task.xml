@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="@dimen/space_8">
+
+    <ImageView
+        android:id="@+id/ivCheckboxIcon"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginBottom="@dimen/space_8" />
+
+    <TextView
+        android:id="@+id/tvCheckboxTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_xl"
+        android:textStyle="bold"
+        android:letterSpacing="-0.01"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/space_3" />
+
+    <TextView
+        android:id="@+id/tvCheckboxDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_muted"
+        android:textSize="@dimen/text_base"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/space_12" />
+
+    <!-- Countdown before confirm available -->
+    <TextView
+        android:id="@+id/tvCountdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wait 30s to confirm"
+        android:textColor="@color/text_faint"
+        android:textSize="@dimen/text_sm"
+        android:layout_marginBottom="@dimen/space_6" />
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/bg_button_primary"
+        android:text="@string/confirm"
+        android:textColor="@color/bg"
+        android:textSize="@dimen/text_base"
+        android:textStyle="bold"
+        android:enabled="false"
+        android:alpha="0.4"
+        android:layout_marginBottom="@dimen/space_3" />
+
+    <Button
+        android:id="@+id/btnCancelCheckbox"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/bg_button_ghost"
+        android:text="Cancel"
+        android:textColor="@color/text_muted"
+        android:textSize="@dimen/text_sm" />
+
+</LinearLayout>

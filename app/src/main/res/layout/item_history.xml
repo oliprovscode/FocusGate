@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:paddingVertical="@dimen/space_3"
+    android:layout_marginBottom="@dimen/space_1">
+
+    <View
+        android:id="@+id/viewDot"
+        android:layout_width="6dp"
+        android:layout_height="6dp"
+        android:background="@color/success"
+        android:layout_marginEnd="@dimen/space_3" />
+
+    <TextView
+        android:id="@+id/tvHistoryDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textColor="@color/text_muted"
+        android:textSize="@dimen/text_sm" />
+
+    <TextView
+        android:id="@+id/tvHistoryTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/text_sm" />
+
+</LinearLayout>

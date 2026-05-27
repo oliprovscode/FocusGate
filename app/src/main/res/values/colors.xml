@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background layers (dark, near-black) -->
+    <color name="bg">#0F0E0D</color>
+    <color name="surface">#161513</color>
+    <color name="surface_2">#1C1B19</color>
+    <color name="surface_offset">#232220</color>
+    <color name="divider">#2A2927</color>
+    <color name="border">#333230</color>
+
+    <!-- Text -->
+    <color name="text_primary">#E8E6E3</color>
+    <color name="text_muted">#7A7874</color>
+    <color name="text_faint">#4A4946</color>
+
+    <!-- Accent (teal) -->
+    <color name="primary">#4F98A3</color>
+    <color name="primary_dark">#1A626B</color>
+    <color name="primary_highlight">#1E3538</color>
+
+    <!-- Success / Error -->
+    <color name="success">#6DAA45</color>
+    <color name="error">#DD6974</color>
+    <color name="warning">#FDAB43</color>
+</resources>
