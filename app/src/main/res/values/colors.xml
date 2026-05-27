@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Base palette -->
     <color name="color_primary">#01696f</color>
     <color name="color_primary_dark">#0c4e54</color>
     <color name="color_background">#0f1110</color>
@@ -12,4 +13,25 @@
     <color name="color_success">#6daa45</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+
+    <!-- Semantic aliases used by drawables and layouts -->
+    <color name="primary">#01696f</color>
+    <color name="primary_dark">#0c4e54</color>
+    <color name="primary_light">#4f98a3</color>
+    <color name="background">#0f1110</color>
+    <color name="surface">#1a1d1c</color>
+    <color name="surface_2">#222625</color>
+    <color name="text">#e8e8e6</color>
+    <color name="text_muted">#7a7d7b</color>
+    <color name="text_faint">#4a4d4b</color>
+    <color name="divider">#2a2e2d</color>
+    <color name="error">#cf6679</color>
+    <color name="success">#6daa45</color>
+    <color name="warning">#da7101</color>
+    <color name="warning_light">#fdab43</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="on_surface">#e8e8e6</color>
+
+    <!-- Launcher background -->
+    <color name="ic_launcher_background">#01696f</color>
 </resources>
