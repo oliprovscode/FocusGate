@@ -4,6 +4,21 @@
     <string name="accessibility_service_label">FocusGate App Blocker</string>
     <string name="accessibility_service_description">FocusGate monitors which app is in the foreground and blocks Instagram until your daily task is complete.</string>
 
+    <!-- TaskType title/desc strings (matched to TaskType.kt enum refs) -->
+    <string name="task_pushups_title">10 Push-ups</string>
+    <string name="task_pushups_desc">Do 10 push-ups detected by your front camera</string>
+    <string name="task_shower_title">Morning Shower</string>
+    <string name="task_shower_desc">Take a morning shower (available 08:00&#8211;10:00)</string>
+    <string name="task_steps_title">250 Steps</string>
+    <string name="task_steps_desc">Walk 250 steps from your starting point</string>
+    <string name="task_read_title">Read 5 Minutes</string>
+    <string name="task_read_desc">Read with your phone face-down for 5 minutes</string>
+    <string name="task_water_title">Drink Water</string>
+    <string name="task_water_desc">Get up and drink a glass of water</string>
+    <string name="task_breathing_title">Box Breathing</string>
+    <string name="task_breathing_desc">Complete 4 cycles of box breathing</string>
+
+    <!-- Legacy aliases (used in layouts/adapters) -->
     <string name="task_pushups">10 Push-ups</string>
     <string name="task_shower">Morning Shower</string>
     <string name="task_steps">250 Steps</string>
@@ -11,19 +26,13 @@
     <string name="task_water">Drink Water</string>
     <string name="task_breathing">Box Breathing</string>
 
-    <string name="task_pushups_desc">Do 10 push-ups detected by your front camera</string>
-    <string name="task_shower_desc">Take a morning shower (available 08:00&#8211;10:00)</string>
-    <string name="task_steps_desc">Walk 250 steps from your starting point</string>
-    <string name="task_reading_desc">Read with your phone face-down for 5 minutes</string>
-    <string name="task_water_desc">Get up and drink a glass of water</string>
-    <string name="task_breathing_desc">Complete 4 cycles of box breathing</string>
-
     <string name="blocked_title">Instagram is locked</string>
     <string name="blocked_subtitle">Complete a task to unlock it for today</string>
     <string name="choose_task">Choose a task</string>
     <string name="task_complete">Task complete</string>
     <string name="unlock_instagram">Unlock Instagram</string>
     <string name="streak_label">Day streak</string>
+    <string name="history_label">History</string>
     <string name="today_task_done">Today&#8217;s task done</string>
     <string name="enable_accessibility">Enable Accessibility Service</string>
     <string name="enable_accessibility_desc">FocusGate needs Accessibility permission to block Instagram</string>
@@ -31,10 +40,11 @@
     <string name="start">Start</string>
     <string name="done">Done</string>
     <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
     <string name="reps_count">%d / 10</string>
     <string name="steps_count">%d / 250</string>
     <string name="time_remaining">%s remaining</string>
-    <string name="hold_still">Hold still…</string>
+    <string name="hold_still">Hold still&#8230;</string>
     <string name="get_into_position">Get into push-up position</string>
     <string name="place_phone_down">Place your phone face-down on a surface</string>
 </resources>
