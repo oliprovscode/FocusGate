@@ -8,11 +8,33 @@
     android:gravity="center"
     android:padding="@dimen/space_8">
 
+    <!-- Dynamically set to blocked app's icon; fallback to lock icon -->
     <ImageView
+        android:id="@+id/ivBlockedAppIcon"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/ic_lock"
+        android:layout_marginBottom="@dimen/space_4"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ivLockFallback"
         android:layout_width="64dp"
         android:layout_height="64dp"
         android:src="@drawable/ic_lock"
         android:layout_marginBottom="@dimen/space_8" />
+
+    <!-- Blocked app name -->
+    <TextView
+        android:id="@+id/tvBlockedAppName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_muted"
+        android:textSize="@dimen/text_sm"
+        android:letterSpacing="0.04"
+        android:textAllCaps="true"
+        android:layout_marginBottom="@dimen/space_2"
+        android:visibility="gone" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -22,6 +44,7 @@
         android:textSize="@dimen/text_2xl"
         android:textStyle="bold"
         android:letterSpacing="-0.02"
+        android:gravity="center"
         android:layout_marginBottom="@dimen/space_3" />
 
     <TextView

@@ -33,7 +33,7 @@
                 android:id="@+id/tvSubtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Instagram is locked."
+                android:text="Earn your apps."
                 android:textColor="@color/text_muted"
                 android:textSize="@dimen/text_base"
                 android:layout_marginBottom="@dimen/space_8" />
@@ -120,9 +120,43 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Instagram unlocked for today."
+                    android:text="Apps unlocked for today."
                     android:textColor="@color/success"
                     android:textSize="@dimen/text_base" />
+            </LinearLayout>
+
+            <!-- Manage blocked apps button -->
+            <LinearLayout
+                android:id="@+id/btnManageApps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_card"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:padding="@dimen/space_6"
+                android:layout_marginBottom="@dimen/space_4"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/ic_apps_manage"
+                    android:layout_marginEnd="@dimen/space_4" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Manage blocked apps"
+                    android:textColor="@color/text_primary"
+                    android:textSize="@dimen/text_base" />
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_chevron_right" />
+
             </LinearLayout>
 
             <!-- Section: History -->
@@ -166,7 +200,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="FocusGate needs accessibility access to block Instagram. Tap to enable."
+                    android:text="FocusGate needs accessibility access to block apps. Tap to enable."
                     android:textColor="@color/text_muted"
                     android:textSize="@dimen/text_sm"
                     android:layout_marginBottom="@dimen/space_4" />

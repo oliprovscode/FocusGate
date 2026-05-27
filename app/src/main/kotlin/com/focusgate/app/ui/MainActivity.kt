@@ -10,8 +10,6 @@ import com.focusgate.app.data.TaskRepository
 import com.focusgate.app.databinding.ActivityMainBinding
 import com.focusgate.app.service.FocusAccessibilityService
 import kotlinx.coroutines.launch
-import java.text.SimpleDateFormat
-import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -25,10 +23,9 @@ class MainActivity : AppCompatActivity() {
 
         repo = TaskRepository(this)
 
-        // Listen to task history
+        // Task history
         lifecycleScope.launch {
             repo.recentHistory.collect { records ->
-                // TODO: bind RecyclerView adapter with records
                 val adapter = HistoryAdapter(records)
                 binding.rvHistory.adapter = adapter
                 binding.rvHistory.layoutManager =
@@ -39,6 +36,11 @@ class MainActivity : AppCompatActivity() {
         // Unlock button
         binding.btnUnlock.setOnClickListener {
             startActivity(Intent(this, TaskPickerActivity::class.java))
+        }
+
+        // Manage blocked apps
+        binding.btnManageApps.setOnClickListener {
+            startActivity(Intent(this, BlockedAppsActivity::class.java))
         }
 
         // Accessibility enable button
@@ -70,7 +72,6 @@ class MainActivity : AppCompatActivity() {
                 binding.layoutTodayDone.visibility = android.view.View.GONE
             }
 
-            // Check accessibility
             val isServiceEnabled = isAccessibilityServiceEnabled()
             binding.layoutAccessibilityWarning.visibility =
                 if (isServiceEnabled) android.view.View.GONE else android.view.View.VISIBLE

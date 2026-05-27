@@ -8,9 +8,19 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_CAMERA" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <!-- Needed to list installed apps for the blocked apps picker -->
+    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
 
     <uses-feature android:name="android.hardware.camera.front" android:required="false" />
     <uses-feature android:name="android.hardware.sensor.stepcounter" android:required="false" />
+
+    <queries>
+        <!-- Allow querying all user-installed apps for the blocked apps picker -->
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
 
     <application
         android:name=".FocusGateApp"
@@ -21,7 +31,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.FocusGate">
 
-        <!-- Main entry screen -->
         <activity
             android:name=".ui.MainActivity"
             android:exported="true"
@@ -33,33 +42,33 @@
             </intent-filter>
         </activity>
 
-        <!-- Task selection screen -->
         <activity
             android:name=".ui.TaskPickerActivity"
             android:exported="false" />
 
-        <!-- Pushup camera task -->
+        <!-- Blocked apps manager -->
+        <activity
+            android:name=".ui.BlockedAppsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
         <activity
             android:name=".ui.tasks.PushupTaskActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 
-        <!-- Timed reading task -->
         <activity
             android:name=".ui.tasks.ReadingTaskActivity"
             android:exported="false" />
 
-        <!-- Step counter task -->
         <activity
             android:name=".ui.tasks.StepsTaskActivity"
             android:exported="false" />
 
-        <!-- Shower / hydration checkbox tasks -->
         <activity
             android:name=".ui.tasks.CheckboxTaskActivity"
             android:exported="false" />
 
-        <!-- Accessibility service (app blocker) -->
         <service
             android:name=".service.FocusAccessibilityService"
             android:exported="true"
@@ -73,7 +82,6 @@
                 android:resource="@xml/accessibility_service_config" />
         </service>
 
-        <!-- Block overlay activity (full screen, shown over Instagram) -->
         <activity
             android:name=".ui.BlockedActivity"
             android:exported="false"
@@ -81,7 +89,6 @@
             android:launchMode="singleInstance"
             android:theme="@style/Theme.FocusGate.Fullscreen" />
 
-        <!-- Boot receiver -->
         <receiver
             android:name=".receiver.BootReceiver"
             android:exported="true">
